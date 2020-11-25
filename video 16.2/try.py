@@ -1,18 +1,28 @@
-import math as m
-def encryption(s):
-    ans = ""
-    s="".join(s.split()) 
-    print(s)
-    n = len(s)
-    print(s)
-    
-    l = m.sqrt(n)
+def howManyGames(p, d, m, s):
+    l = []
+    for i in range(s):
+        y = (p - d*i)
+        if y > m:
+            l.append(y)
+        elif m >= y > 0:
+            h = s*[m]
+            print(h)
+            l.append(y)
     print(l)
-    
-    r = m.floor(l)
-    print(r)
-    
-    c = m.ceil(l)
-    print(c)
-    
-    
+    sm = 0
+    ct =0       
+    for i in l:
+        sm += i
+        
+        if sm < s:
+            ct += 1
+            
+            
+    print(ct)
+    return ct
+
+
+
+
+print(howManyGames(16,2,1,9981))
+#9917
